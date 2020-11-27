@@ -101,7 +101,7 @@ func main() {
 		for l := 0; l < itemsEntrenam; l++ {
 			for i := 1; i < neuronas; i++ {
 				wg.Add(1)
-				asig(l, i, &wg)
+				go asig(l, i, &wg)
 			}
 			wg.Wait()
 			h[neuronas] = 0
@@ -116,12 +116,12 @@ func main() {
 
 			for i := 1; i < neuronas; i++ {
 				wg.Add(1)
-				hallarD(i, &wg)
+				go hallarD(i, &wg)
 			}
 			wg.Wait()
 			for i := 1; i < neuronas; i++ {
 				wg.Add(1)
-				ajustarPesos(l, i, &wg)
+				go ajustarPesos(l, i, &wg)
 			}
 			wg.Wait()
 			for j := 1; j <= entradas; j++ {
