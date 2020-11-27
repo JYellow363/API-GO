@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "e4e04edb-797f-4ce5-aa36-72ecc94e6ed2",
+		"name": "TF - PCD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Clasificación",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/iris/5.1,3.5,1.4,0.2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"iris",
+						"5.1,3.5,1.4,0.2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Clasificación",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"largoSepalo\": 5.1,\r\n    \"anchoSepalo\": 3.5,\r\n    \"largoPetalo\": 1.4,\r\n    \"anchoPetalo\": 0.2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/iris",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"iris"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
